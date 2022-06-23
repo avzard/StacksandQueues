@@ -26,6 +26,33 @@ namespace StacksandQueues
             top = node;
 
         }
+        internal void peek()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is Empty...");
+            }
+            Console.WriteLine("\nTop Most Element in Stack : " + top.data);
+        }
+
+        internal void pop()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is Empty... ");
+            }
+            Console.WriteLine("Deleted Element : " + top.data);
+            top = top.next;
+        }
+        internal void isEmpty()
+        {
+            while (top != null)
+            {
+                peek();
+                pop();
+            }
+            Console.WriteLine("Stack is Empty...");
+        }
 
         public void Display()
         {
